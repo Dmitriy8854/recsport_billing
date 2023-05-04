@@ -21,6 +21,7 @@
 
 ```
 git@github.com:Dmitriy8854/recsport_billing.git
+```
 cd recsport_billing
 
 ```
@@ -28,7 +29,7 @@ Cоздать и активировать виртуальное окружен�
 
 ```
 python -m venv venv
-
+```
 source venv/bin/activate
 
 ```
@@ -36,6 +37,7 @@ source venv/bin/activate
 
 ```
 python -m pip install --upgrade pip
+```
 pip install -r requirements.txt
 
 ```
