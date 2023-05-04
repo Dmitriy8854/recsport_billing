@@ -32,7 +32,9 @@ class Cart(object):
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
-
+    def __len__(self):
+        """Возвращает общее количество товаров в корзине."""
+        return sum(item['quantity'] for item in self.cart.values())
     def __iter__(self):
         """Проходим по товарам корзины и получаем соответствующие объекты Product."""
         product_ids = self.cart.keys()
@@ -44,11 +46,9 @@ class Cart(object):
         for item in cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
-        yield item
+            yield item
 
-    def __len__(self):
-        """Возвращает общее количество товаров в корзине."""
-        return sum(item['quantity'] for item in self.cart.values())
+
     
     def get_total_price(self):
         return sum(
