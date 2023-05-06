@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
    # 'acquiring.apps.AcquiringConfig',
    # 'cart.apps.CartConfig',
+   #'orders.apps.OrdersConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'acquiring',
     'cart',
+    'orders',
+
 ]
 
 MIDDLEWARE = [

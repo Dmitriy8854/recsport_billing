@@ -1,8 +1,8 @@
 {% extends "acquiring/base.html" %}
 {% load static %}
-{% block title %}Your shopping cart{% endblock %}
+{% block title %}Ваша корзина для покупок{% endblock %}
 {% block content %}
- <h1>Your shopping cart</h1>
+ <h1>Ваша корзина для покупок</h1>
  <table class="cart">
  <thead>
  <tr>
@@ -46,7 +46,7 @@
  </tbody>
  </table>
  <p class="text-right">
- <a href="{% url "acquiring:product_detail" p.id %}" class="button light">Continue shopping</a>
- <a href="#" class="button">Checkout</a>
+ <a href="{{ product.get_absolute_url }}" class="button light">Продолжить покупки</a>
+ <a href="{% url "orders:order_create" %}" class="button">Checkout</a>
  </p>
 {% endblock %}
